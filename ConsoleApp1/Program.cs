@@ -26,3 +26,4 @@ consumer.Received += (model, eventArgs) =>
 //read the message
 channel.BasicConsume(queue: "product", autoAck: true, consumer: consumer);
 Console.ReadKey();
+ 
