@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "A8J13q/VMnGCD834BkRMj+X27QfaKTU9ckkp8ANA4Zk=",
+  "Source": "fakestoreapi.api",
+  "BasePath": "_content/fakestoreapi.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

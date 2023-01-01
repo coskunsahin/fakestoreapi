@@ -1,0 +1,17 @@
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\bin\Debug\net6.0\fakestoreapi.Console.exe
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\bin\Debug\net6.0\fakestoreapi.Console.deps.json
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\bin\Debug\net6.0\fakestoreapi.Console.runtimeconfig.json
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\bin\Debug\net6.0\fakestoreapi.Console.dll
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\bin\Debug\net6.0\fakestoreapi.Console.pdb
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\obj\Debug\net6.0\fakestoreapi.Console.csproj.AssemblyReference.cache
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\obj\Debug\net6.0\fakestoreapi.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\obj\Debug\net6.0\fakestoreapi.Console.AssemblyInfoInputs.cache
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\obj\Debug\net6.0\fakestoreapi.Console.AssemblyInfo.cs
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\obj\Debug\net6.0\fakestoreapi.Console.csproj.CoreCompileInputs.cache
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\obj\Debug\net6.0\fakestoreapi.Console.csproj.CopyComplete
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\obj\Debug\net6.0\fakestoreapi.Console.dll
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\obj\Debug\net6.0\refint\fakestoreapi.Console.dll
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\obj\Debug\net6.0\fakestoreapi.Console.pdb
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\obj\Debug\net6.0\fakestoreapi.Console.genruntimeconfig.cache
+C:\Users\COSKUN\Desktop\fakestoreapi\fakestoreapi\fakestoreapi.Console\obj\Debug\net6.0\ref\fakestoreapi.Console.dll

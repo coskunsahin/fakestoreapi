@@ -1,0 +1,13 @@
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\bin\Debug\netcoreapp3.1\fakestoreapi.application.deps.json
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\bin\Debug\netcoreapp3.1\fakestoreapi.application.dll
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\bin\Debug\netcoreapp3.1\fakestoreapi.application.pdb
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\bin\Debug\netcoreapp3.1\fakestoreapi.domain.dll
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\bin\Debug\netcoreapp3.1\fakestoreapi.domain.pdb
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\obj\Debug\netcoreapp3.1\fakestoreapi.application.csproj.AssemblyReference.cache
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\obj\Debug\netcoreapp3.1\fakestoreapi.application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\obj\Debug\netcoreapp3.1\fakestoreapi.application.AssemblyInfoInputs.cache
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\obj\Debug\netcoreapp3.1\fakestoreapi.application.AssemblyInfo.cs
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\obj\Debug\netcoreapp3.1\fakestoreapi.application.csproj.CoreCompileInputs.cache
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\obj\Debug\netcoreapp3.1\fakestoreapi.application.csproj.CopyComplete
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\obj\Debug\netcoreapp3.1\fakestoreapi.application.dll
+C:\Users\COSKUN\source\repos\fakestoreapi\fakestoreapi.application\obj\Debug\netcoreapp3.1\fakestoreapi.application.pdb
