@@ -2,6 +2,7 @@
 using fakestoreapi.application.Common.Interfaces;
 using fakestoreapi.domain.Common;
 using fakestoreapi.domain.Entities;
+using fakestoreapi.domain.Entities.Domain.Entities;
 using fakestoreapi.infrastructure.Models;
 
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
@@ -27,13 +28,13 @@ namespace fakestoreapi.infrastructure.Data
         }
 
 
-        public DbSet<Product> Products { get; set; }
 
+        public DbSet<Contact> Contacts { get; set; }
         public DbSet<People> Peoples { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseNpgsql("User ID=postgres;Password=12345;Server=localhost;Port=5432;Database=fakedb;Integrated Security=true;Pooling=true;");
+            builder.UseNpgsql("User ID=postgres;Password=12345;Server=localhost;Port=5432;Database=restdb;Integrated Security=true;Pooling=true;");
 
 
 

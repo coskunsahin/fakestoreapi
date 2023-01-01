@@ -9,49 +9,42 @@ using fakestoreapi.application.Fakestoreapi;
 using fakestoreapi.domain.Entities;
 using System.Linq;
 using static System.Net.Mime.MediaTypeNames;
- 
+
 using fakestoreapi.rabbit;
+using fakestoreapi.domain.Entities.Domain.Entities;
 
 namespace fakestoreapi.application.Handlers
 {
     public class CreatePeopleCommandHandler : IRequestHandler<CreatePeopleCommand, int>
     {
         private readonly IApplicationDbContext _context;
-       // private readonly IRabitMQProducer _rabitMQProducer;
-        public CreatePeopleCommandHandler(IApplicationDbContext context/* IRabitMQProducer rabitMQProducer*/)
+
+        public CreatePeopleCommandHandler(IApplicationDbContext context)
         {
             _context = context;
-            //_rabitMQProducer = rabitMQProducer;
-
-
         }
         public async Task<int> Handle(CreatePeopleCommand request, CancellationToken cancellationToken)
         {
             var entity = new People
             {
-              //Name = request.Name,
-              //Address = request.Address,
-              //ZipCode =request.ZipCode,
-              //Cardnumber=request.Cardnumber,
-              TotalAmount=request.TotalAmount,
-              Products = request.Products.Select(i => new Product
+                LastName = request.LastName,
+
+                Name = request.Name,
+                Company = request.Company,
+                ReportTime = request.ReportTime,
+                Contacts = request.Contacts.Select(i => new Contact
                 {
-                    Title = i.Title,
-                   Quanty=i.Quanty, 
-                   Price=i.Price,
-                   Description=i.Description,
-                   Category=i.Category,
-                  Image=i.Image,
-                  Rating=i.Rating
-
-              }).ToList()
+                    Uuid = Guid.NewGuid(),
+                    Phone = i.Phone,
+                    Addrees = i.Addrees,
+                    Email = i.Email,
+                    Location = i.Location,
+                    Info = i.Info
+                }).ToList()
             };
-
             _context.Peoples.Add(entity);
-           // _rabitMQProducer.SendProductMessage(entity);
             await _context.SaveChangesAsync(cancellationToken);
-           
-            return entity.Id;
+            return entity.PeopleID;
         }
     }
 }

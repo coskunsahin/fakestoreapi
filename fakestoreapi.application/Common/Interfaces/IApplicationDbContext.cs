@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using fakestoreapi.domain.Entities;
+using fakestoreapi.domain.Entities.Domain.Entities;
 
 namespace fakestoreapi.application.Common.Interfaces
 {
@@ -14,9 +15,9 @@ namespace fakestoreapi.application.Common.Interfaces
         DbSet<People> Peoples { get; set; }
 
 
-        DbSet<Product> Products { get; set; }
+        DbSet<Contact> Contacts { get; set; }
 
-       
+
 
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);

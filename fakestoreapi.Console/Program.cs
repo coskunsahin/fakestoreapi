@@ -18,10 +18,7 @@ consumer.Received += (model, eventArgs) =>
 {
     var body = eventArgs.Body.ToArray();
     var message = Encoding.UTF8.GetString(body);
-    Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:ss"));
-    Console.WriteLine($"Report Start...");
-    Console.WriteLine($"People and Phone: {message}");
-    Console.WriteLine($"Report Finished");
+    Console.WriteLine($"Product message received: {message}");
 };
 //read the message
 channel.BasicConsume(queue: "product", autoAck: true, consumer: consumer);

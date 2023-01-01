@@ -163,7 +163,7 @@ namespace fakestoreapi.infrastructure.Migrations
                     b.ToTable("PersistedGrants", (string)null);
                 });
 
-            modelBuilder.Entity("fakestoreapi.domain.Entities.People", b =>
+            modelBuilder.Entity("fakestoreapi.domain.Entities.Contact", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -171,10 +171,55 @@ namespace fakestoreapi.infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Address")
+                    b.Property<string>("Addrees")
                         .HasColumnType("text");
 
-                    b.Property<string>("Cardnumber")
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Info")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("LastModified")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("text");
+
+                    b.Property<long>("Location")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("PeopleID")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Phone")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("Uuid")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PeopleID");
+
+                    b.ToTable("Contacts");
+                });
+
+            modelBuilder.Entity("fakestoreapi.domain.Entities.Domain.Entities.People", b =>
+                {
+                    b.Property<int>("PeopleID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("PeopleID"));
+
+                    b.Property<string>("Company")
                         .HasColumnType("text");
 
                     b.Property<DateTime>("Created")
@@ -187,71 +232,20 @@ namespace fakestoreapi.infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastModifiedBy")
+                        .HasColumnType("text");
+
+                    b.Property<string>("LastName")
                         .HasColumnType("text");
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
-                    b.Property<double>("TotalAmount")
-                        .HasColumnType("double precision");
+                    b.Property<DateTime>("ReportTime")
+                        .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("ZipCode")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
+                    b.HasKey("PeopleID");
 
                     b.ToTable("Peoples");
-                });
-
-            modelBuilder.Entity("fakestoreapi.domain.Entities.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Category")
-                        .HasColumnType("text");
-
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Image")
-                        .HasColumnType("text");
-
-                    b.Property<DateTime?>("LastModified")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("text");
-
-                    b.Property<int?>("PeopleId")
-                        .HasColumnType("integer");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("double precision");
-
-                    b.Property<int>("Quanty")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Rating")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PeopleId");
-
-                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("fakestoreapi.infrastructure.Models.ApplicationUser", b =>
@@ -454,11 +448,13 @@ namespace fakestoreapi.infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("fakestoreapi.domain.Entities.Product", b =>
+            modelBuilder.Entity("fakestoreapi.domain.Entities.Contact", b =>
                 {
-                    b.HasOne("fakestoreapi.domain.Entities.People", "People")
-                        .WithMany("Products")
-                        .HasForeignKey("PeopleId");
+                    b.HasOne("fakestoreapi.domain.Entities.Domain.Entities.People", "People")
+                        .WithMany("Contacts")
+                        .HasForeignKey("PeopleID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("People");
                 });
@@ -514,9 +510,9 @@ namespace fakestoreapi.infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("fakestoreapi.domain.Entities.People", b =>
+            modelBuilder.Entity("fakestoreapi.domain.Entities.Domain.Entities.People", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("Contacts");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,4 +1,5 @@
-﻿using fakestoreapi.domain.Entities;
+﻿using fakestoreapi.application.ViewModels.Application.Invoices.ViewModels;
+using fakestoreapi.domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,21 +8,24 @@ namespace fakestoreapi.application.ViewModels
 {
     public class PeopleVM
     {
+
+
         public PeopleVM()
         {
-            this.Products = new List<ProductVm>();
+            this.Contacts = new List<ContactVM>();
         }
 
-
-
-        public int Id { get; set; }
+        public int PeopleID { get; set; }
         public string Name { get; set; }
-        public string Address { get; set; }
-        public string Cardnumber { get; set; }
 
-        public int ZipCode { get; set; }
-        public double TotalAmount { get; set; }
+        public string LastName { get; set; }
 
-        public IList<ProductVm> Products { get; set; }
+        public string Company { get; set; }
+
+
+
+        public DateTime ReportTime { get; set; }
+        public List<ContactVM> Contacts { get; set; }
+        public object GroupId { get; internal set; }
     }
 }

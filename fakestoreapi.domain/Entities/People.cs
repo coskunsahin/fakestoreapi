@@ -1,28 +1,45 @@
-﻿using fakestoreapi.domain.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace fakestoreapi.domain.Entities
 {
-   public class People : AuditEntity
+   
+    using fakestoreapi.domain.Common;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Domain.Entities
     {
-        public People()
+        public class People : AuditEntity
         {
-            this.Products = new List<Product>();
+           
+
+            //[Table(Contact)]
+            public People()
+            {
+                this.Contacts = new List<Contact>();
+            }
+            [Key]
+            public int PeopleID { get; set; }
+            public string Name { get; set; }
+
+            public string LastName { get; set; }
+
+            public string Company { get; set; }
+
+
+            public DateTime ReportTime { get; set; }
+            public List<Contact> Contacts { get; set; }
+
+            
         }
-
-
-
-        public int Id { get; set; }  
-        public string Name { get; set; }
-        public string Address { get; set; }
-        public string Cardnumber { get; set; }
-       
-        public int ZipCode { get; set; }
-        public double TotalAmount { get; set; }
-        
-      public IList<Product> Products { get; set; }
-       
     }
 }

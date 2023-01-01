@@ -1,5 +1,5 @@
-﻿//using Application.Common.Interfaces;
-//using fakestoreapi.domain;
+﻿
+using fakestoreapi.domain;
 using fakestoreapi.application.Common.Interfaces;
 using fakestoreapi.infrastructure.Data;
 using fakestoreapi.infrastructure.Models;
@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace fakestoreapi.infrastructure
 {
-   
+
     public static class DependencyInjection
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
@@ -33,7 +33,7 @@ namespace fakestoreapi.infrastructure
 
             return services;
 
-             
+
         }
     }
 
